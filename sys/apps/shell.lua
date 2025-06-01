@@ -1,8 +1,8 @@
 local parentShell = _ENV.shell
 _ENV.shell = { }
 
-local trace = require('opus.trace')
-local Util  = require('opus.util')
+local trace = require('supo.trace')
+local Util  = require('supo.util')
 
 local fs       = _G.fs
 local settings = _G.settings
@@ -365,12 +365,12 @@ if #tArgs > 0 then
 	return run(...)
 end
 
-local Config   = require('opus.config')
-local Entry    = require('opus.entry')
-local History  = require('opus.history')
-local Input    = require('opus.input')
-local Sound    = require('opus.sound')
-local Terminal = require('opus.terminal')
+local Config   = require('supo.config')
+local Entry    = require('supo.entry')
+local History  = require('supo.history')
+local Input    = require('supo.input')
+local Sound    = require('supo.sound')
+local Terminal = require('supo.terminal')
 
 local colors    = _G.colors
 local os        = _G.os

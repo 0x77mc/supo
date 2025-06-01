@@ -1,7 +1,7 @@
-local class = require('opus.class')
-local entry = require('opus.entry')
-local UI    = require('opus.ui')
-local Util  = require('opus.util')
+local class = require('supo.class')
+local entry = require('supo.entry')
+local UI    = require('supo.ui')
+local Util  = require('supo.util')
 
 local _rep   = string.rep
 

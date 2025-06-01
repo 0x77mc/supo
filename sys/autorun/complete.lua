@@ -27,7 +27,7 @@ _ENV.shell.setCompletionFunction("sys/apps/inspect.lua",
 	function(_, index, text)
 		if index == 1 then
 			local components = { }
-			for _, f in pairs(fs.list('sys/modules/opus/ui/components')) do
+			for _, f in pairs(fs.list('sys/modules/supo/ui/components')) do
 				table.insert(components, (f:gsub("%.lua$", "")))
 			end
 			return completeMultipleChoice(text, components)

@@ -20,17 +20,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Create version file
       run: |
-        echo `date` > .opus_version
-        git log >> .opus_version
+        echo `date` > .supo_version
+        git log >> .supo_version
 
     - name: Commit version file
       uses: alexesprit/action-update-file@main
       with:
         branch: 'develop-1.8'
-        file-path: .opus_version
+        file-path: .supo_version
         commit-msg: Update version date
         github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,6 @@
-local UI   = require("opus.ui")
-local Util = require("opus.util")
-local SHA  = require('opus.crypto.sha2')
+local UI   = require("supo.ui")
+local Util = require("supo.util")
+local SHA  = require('supo.crypto.sha2')
 
 local function split(s)
   local b = ""

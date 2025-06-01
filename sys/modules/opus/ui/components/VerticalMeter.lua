@@ -1,5 +1,5 @@
-local class = require('opus.class')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local UI    = require('supo.ui')
 
 UI.VerticalMeter = class(UI.Window)
 UI.VerticalMeter.defaults = {
@@ -20,7 +20,7 @@ function UI.VerticalMeter.example()
 		x = 2, width = 3, y = 2, ey = -2,
 		focus = function() end,
 		enable = function(self)
-			require('opus.event').onInterval(.25, function()
+			require('supo.event').onInterval(.25, function()
 				self.value = self.value == 100 and 0 or self.value + 5
 				self:draw()
 				self:sync()

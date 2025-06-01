@@ -1,5 +1,5 @@
-local class  = require('opus.class')
-local UI     = require('opus.ui')
+local class  = require('supo.class')
+local UI     = require('supo.ui')
 
 UI.Dialog = class(UI.SlideOut)
 UI.Dialog.defaults = {
@@ -40,7 +40,7 @@ function UI.Dialog.example()
 		},
 		statusBar = UI.StatusBar(),
 		enable = function(self)
-			require('opus.event').onTimeout(0, function()
+			require('supo.event').onTimeout(0, function()
 				self:show()
 				self:sync()
 			end)

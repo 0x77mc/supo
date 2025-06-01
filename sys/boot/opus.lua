@@ -26,7 +26,7 @@ for k,v in pairs(_ENV) do
 end
 
 -- Install require shim
-_G.requireInjector = loadfile('sys/modules/opus/injector.lua', _ENV)()
+_G.requireInjector = loadfile('sys/modules/supo/injector.lua', _ENV)()
 
 local function run(file, ...)
 	local env = setmetatable({ }, { __index = _G })
@@ -49,7 +49,7 @@ _G.OPUS_BRANCH = 'develop-1.8'
 local s, m = pcall(run, 'sys/apps/shell.lua', 'sys/kernel.lua', ...)
 
 if not s then
-	print('\nError loading Opus OS\n')
+	print('\nError loading Supo OS\n')
 	_G.printError(m .. '\n')
 end
 

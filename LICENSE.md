@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2025 Mykhailo Marynenko
 Copyright (c) 2016-2019 kepler155c
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

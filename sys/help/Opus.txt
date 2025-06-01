@@ -23,7 +23,7 @@ There are 3 different ways to open tabs:
 
 Copy / Paste
 ============
-Opus can paste from both the system clipboard and the internal clipboard.
+Supo can paste from both the system clipboard and the internal clipboard.
 
  * control-v: for normal clipboard
  * control-shift-v: for internal clipboard

@@ -21,8 +21,8 @@
 -- Completeness? Yes: The curve is an Edwards Curve with non-square d and square a, so the curve is complete.
 -- Indistinguishability? No: The curve does not support indistinguishability maps.
 
-local fp = require('opus.crypto.ecc.fp')
-local Util = require('opus.util')
+local fp = require('supo.crypto.ecc.fp')
+local Util = require('supo.util')
 
 local eq = fp.eq
 local mul = fp.mul

@@ -1,6 +1,6 @@
 ---
 name: Enhancement
-about: Suggest a new feature or change to Opus.
+about: Suggest a new feature or change to Supo.
 labels: enhancement
 ---
 <!--- THIS IS A COMMENT. IT WILL NOT APPEAR IN THE FINAL ISSUE. DO NOT REMOVE THEM. -->

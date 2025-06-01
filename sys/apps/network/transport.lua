@@ -5,8 +5,8 @@
 	* background read buffering
 ]]--
 
-local Crypto = require('opus.crypto.chacha20')
-local Event  = require('opus.event')
+local Crypto = require('supo.crypto.chacha20')
+local Event  = require('supo.event')
 
 local network = _G.network
 local os = _G.os

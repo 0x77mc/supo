@@ -1,6 +1,6 @@
-local Blit     = require('opus.ui.blit')
-local Config   = require('opus.config')
-local Util     = require('opus.util')
+local Blit     = require('supo.ui.blit')
+local Config   = require('supo.config')
+local Util     = require('supo.util')
 
 local colors     = _G.colors
 local fs         = _G.fs
@@ -125,7 +125,7 @@ function multishell.openTab(env, tab)
 	end
 	tab.title = tab.title or 'untitled'
 	tab.window = tab.window or window.create(parentTerm, 1, 2, w, h - 1, false)
-		-- require('opus.terminal').window(parentTerm, 1, 2, w, h - 1, false)
+		-- require('supo.terminal').window(parentTerm, 1, 2, w, h - 1, false)
 	tab.onExit = chain(tab.onExit, function(self, result, err, stack)
 		if not result and err and err ~= 'Terminated' then
 			self.terminal.setTextColor(colors.white)

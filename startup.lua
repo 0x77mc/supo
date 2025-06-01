@@ -29,10 +29,10 @@ local function loadBootOptions()
 			preload = { },
 			menu = {
 				{ prompt = os.version() },
-				{ prompt = 'Opus'         , args = { '/sys/boot/opus.lua' } },
-				{ prompt = 'Opus Shell'   , args = { '/sys/boot/opus.lua', '/sys/apps/shell.lua' } },
-				{ prompt = 'Opus Kiosk'   , args = { '/sys/boot/kiosk.lua' } },
-				{ prompt = 'Opus TLCO'    , args = { '/sys/boot/tlco.lua' } },
+				{ prompt = 'Supo'         , args = { '/sys/boot/supo.lua' } },
+				{ prompt = 'Supo Shell'   , args = { '/sys/boot/supo.lua', '/sys/apps/shell.lua' } },
+				{ prompt = 'Supo Kiosk'   , args = { '/sys/boot/kiosk.lua' } },
+				{ prompt = 'Supo TLCO'    , args = { '/sys/boot/tlco.lua' } },
 			},
 		}))
 		f.close()
@@ -64,7 +64,7 @@ local bootOptions = loadBootOptions()
 local bootOption = 2
 if settings then
 	settings.load('.settings')
-	bootOption = tonumber(settings.get('opus.boot_option')) or bootOption
+	bootOption = tonumber(settings.get('supo.boot_option')) or bootOption
 end
 
 local function startupMenu()
@@ -133,13 +133,13 @@ local function splash()
 
 	term.setTextColor(colors.white)
 	if not term.isColor() then
-		local str = 'Opus OS'
+		local str = 'Supo OS'
 		term.setCursorPos((w - #str) / 2, h / 2)
 		term.write(str)
 	else
 		term.setBackgroundColor(colors.black)
 		term.clear()
-		local opus = {
+		local supo = {
 			'fffff00',
 			'ffff07000',
 			'ff00770b00f4444',
@@ -152,8 +152,8 @@ local function splash()
 			'70700000000',
 			'077000000000',
 		}
-		for k,line in ipairs(opus) do
-			term.setCursorPos((w - 18) / 2, k + (h - #opus) / 2)
+		for k,line in ipairs(supo) do
+			term.setCursorPos((w - 18) / 2, k + (h - #supo) / 2)
 			term.blit(string.rep(' ', #line), string.rep('a', #line), line)
 		end
 	end
@@ -179,7 +179,7 @@ while true do
 	if e == 'char' or e == 'key' then
 		bootOption = startupMenu()
 		if settings then
-			settings.set('opus.boot_option', bootOption)
+			settings.set('supo.boot_option', bootOption)
 			settings.save('.settings')
 		end
 		break

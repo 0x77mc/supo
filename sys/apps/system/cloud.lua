@@ -1,6 +1,6 @@
-local Ansi   = require('opus.ansi')
-local Config = require('opus.config')
-local UI     = require('opus.ui')
+local Ansi   = require('supo.ansi')
+local Config = require('supo.config')
+local UI     = require('supo.ui')
 
 if _G.http.websocket then
 	local config = Config.load('cloud')

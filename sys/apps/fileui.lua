@@ -1,5 +1,5 @@
-local UI   = require('opus.ui')
-local Util = require('opus.util')
+local UI   = require('supo.ui')
+local Util = require('supo.util')
 
 local shell  = _ENV.shell
 local multishell = _ENV.multishell

@@ -6,12 +6,12 @@ labels: bug
 ---
 <!--- THIS IS A COMMENT. IT WILL NOT APPEAR IN THE FINAL ISSUE, DO NOT DELETE THESE. -->
 # Details
-<!--- Put a description of the bug here. (Ex. I crashed when running Opus.) -->
+<!--- Put a description of the bug here. (Ex. I crashed when running Supo.) -->
 ## Further context
 <!--- Stack trace (surrounded in three backticks, ‘‘‘), supplementary media such as screenshots and video, etc -->
 ## Versions
 Branch:
 
-Opus Version: <!--- (Do NOT put Latest unless you are unsure) -->
+Supo Version: <!--- (Do NOT put Latest unless you are unsure) -->
 
 CraftOS Version:

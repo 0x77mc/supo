@@ -1,5 +1,5 @@
-local Socket       = require('opus.socket')
-local synchronized = require('opus.sync').sync
+local Socket       = require('supo.socket')
+local synchronized = require('supo.sync').sync
 
 local fs = _G.fs
 

@@ -1,4 +1,4 @@
-local Canvas = require('opus.ui.canvas')
+local Canvas = require('supo.ui.canvas')
 
 local colors = _G.colors
 local term   = _G.term

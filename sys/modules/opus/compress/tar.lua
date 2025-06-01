@@ -1,7 +1,7 @@
 
 -- see: https://github.com/luarocks/luarocks/blob/master/src/luarocks/tools/tar.lua
 -- A pure-Lua implementation of untar (unpacking .tar archives)
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local fs = _G.fs
 local _sub = string.sub

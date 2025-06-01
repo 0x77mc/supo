@@ -4,7 +4,7 @@ if fs.native then
 	return
 end
 
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 fs.native = Util.shallowCopy(fs)
 
@@ -287,7 +287,7 @@ end
 local function getfstype(fstype)
 	local vfs = fstypes[fstype]
 	if not vfs then
-		vfs = require('opus.fs.' .. fstype)
+		vfs = require('supo.fs.' .. fstype)
 		fs.registerType(fstype, vfs)
 	end
 	return vfs

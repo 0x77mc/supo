@@ -1,4 +1,4 @@
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local keyboard = _G.device and _G.device.keyboard
 local keys     = _G.keys
@@ -10,10 +10,10 @@ local modifiers = Util.transpose {
 	keys.leftAlt,   keys.rightAlt,
 }
 
-if not keyboard then -- not running under Opus OS
+if not keyboard then -- not running under Supo OS
 	keyboard = { state = { } }
 
-	local Event = require('opus.event')
+	local Event = require('supo.event')
 	Event.on({ 'key', 'key_up' }, function(event, code)
 		if modifiers[code] then
 			keyboard.state[code] = event == 'key'

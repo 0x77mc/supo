@@ -1,6 +1,6 @@
-local class = require('opus.class')
-local UI    = require('opus.ui')
-local Util  = require('opus.util')
+local class = require('supo.class')
+local UI    = require('supo.ui')
+local Util  = require('supo.util')
 
 local lookup = '0123456789abcdef'
 

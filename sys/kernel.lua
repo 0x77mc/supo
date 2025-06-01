@@ -1,7 +1,7 @@
-local Array    = require('opus.array')
-local Terminal = require('opus.terminal')
-local trace    = require('opus.trace')
-local Util     = require('opus.util')
+local Array    = require('supo.array')
+local Terminal = require('supo.terminal')
+local trace    = require('supo.trace')
+local Util     = require('supo.util')
 
 _G.kernel = {
 	UID = 0,
@@ -306,7 +306,7 @@ local function init(...)
 
 	local runLevel = #args > 0 and 6 or 7
 
-	print('Starting Opus OS')
+	print('Starting Supo OS')
 	local dir = 'sys/init'
 	local files = fs.list(dir)
 	table.sort(files)

@@ -1,6 +1,6 @@
-local class = require('opus.class')
-local fuzzy = require('opus.fuzzy')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local fuzzy = require('supo.fuzzy')
+local UI    = require('supo.ui')
 
 local fs      = _G.fs
 local _insert = table.insert

@@ -1,7 +1,7 @@
-local Event  = require('opus.event')
-local GPS    = require('opus.gps')
-local Socket = require('opus.socket')
-local Util   = require('opus.util')
+local Event  = require('supo.event')
+local GPS    = require('supo.gps')
+local Socket = require('supo.socket')
+local Util   = require('supo.util')
 
 local device  = _G.device
 local kernel  = _G.kernel

@@ -1,8 +1,8 @@
-local Crypto   = require('opus.crypto.chacha20')
-local ECC      = require('opus.crypto.ecc')
-local Security = require('opus.security')
-local SHA      = require('opus.crypto.sha2')
-local Util     = require('opus.util')
+local Crypto   = require('supo.crypto.chacha20')
+local ECC      = require('supo.crypto.ecc')
+local Security = require('supo.security')
+local SHA      = require('supo.crypto.sha2')
+local Util     = require('supo.util')
 
 local device    = _G.device
 local os        = _G.os

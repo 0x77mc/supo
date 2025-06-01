@@ -1,4 +1,4 @@
-local Peripheral = require('opus.peripheral')
+local Peripheral = require('supo.peripheral')
 
 _G.device = Peripheral.getList()
 
@@ -22,8 +22,8 @@ _G.device.mouse = {
 	state   = { },
 }
 
-local Input      = require('opus.input')
-local Util       = require('opus.util')
+local Input      = require('supo.input')
+local Util       = require('supo.util')
 
 local device   = _G.device
 local kernel   = _G.kernel

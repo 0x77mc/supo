@@ -1,8 +1,8 @@
-local Config = require('opus.config')
-local Event  = require('opus.event')
-local Socket = require('opus.socket')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Config = require('supo.config')
+local Event  = require('supo.event')
+local Socket = require('supo.socket')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local device     = _G.device
 local network    = _G.network

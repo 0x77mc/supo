@@ -1,4 +1,4 @@
-local Config     = require('opus.config')
+local Config     = require('supo.config')
 
 local multishell = _ENV.multishell
 local os         = _G.os

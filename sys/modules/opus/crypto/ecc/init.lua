@@ -1,7 +1,7 @@
-local fq       = require('opus.crypto.ecc.fq')
-local elliptic = require('opus.crypto.ecc.elliptic')
-local sha256   = require('opus.crypto.sha2')
-local Util     = require('opus.util')
+local fq       = require('supo.crypto.ecc.fq')
+local elliptic = require('supo.crypto.ecc.elliptic')
+local sha256   = require('supo.crypto.sha2')
+local Util     = require('supo.util')
 
 
 local os = _G.os

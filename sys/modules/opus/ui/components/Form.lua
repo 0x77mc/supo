@@ -1,6 +1,6 @@
-local class = require('opus.class')
-local Sound = require('opus.sound')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local Sound = require('supo.sound')
+local UI    = require('supo.ui')
 
 UI.Form = class(UI.Window)
 UI.Form.defaults = {

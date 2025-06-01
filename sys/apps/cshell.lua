@@ -1,4 +1,4 @@
-local Config     = require('opus.config')
+local Config     = require('supo.config')
 
 local read  = _G.read
 local shell = _ENV.shell

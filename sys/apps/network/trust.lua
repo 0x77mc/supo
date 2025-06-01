@@ -1,8 +1,8 @@
-local Crypto   = require('opus.crypto.chacha20')
-local Event    = require('opus.event')
-local Security = require('opus.security')
-local Socket   = require('opus.socket')
-local Util     = require('opus.util')
+local Crypto   = require('supo.crypto.chacha20')
+local Event    = require('supo.event')
+local Security = require('supo.security')
+local Socket   = require('supo.socket')
+local Util     = require('supo.util')
 
 local trustId = '01c3ba27fe01383a03a1785276d99df27c3edcef68fbf231ca'
 

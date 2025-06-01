@@ -1,4 +1,4 @@
-local Config = require('opus.config')
+local Config = require('supo.config')
 
 local device     = _G.device
 local kernel     = _G.kernel

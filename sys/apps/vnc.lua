@@ -1,7 +1,7 @@
-local Event      = require('opus.event')
-local Socket     = require('opus.socket')
-local Terminal   = require('opus.terminal')
-local Util       = require('opus.util')
+local Event      = require('supo.event')
+local Socket     = require('supo.socket')
+local Terminal   = require('supo.terminal')
+local Util       = require('supo.util')
 
 local colors     = _G.colors
 local multishell = _ENV.multishell

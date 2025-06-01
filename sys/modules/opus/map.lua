@@ -1,5 +1,5 @@
 -- convience functions for tables with key/value pairs
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local Map = { }
 

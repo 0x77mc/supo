@@ -1,4 +1,4 @@
-local git = require('opus.git')
+local git = require('supo.git')
 
 local fs = _G.fs
 

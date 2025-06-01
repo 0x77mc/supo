@@ -1,4 +1,4 @@
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local History    = { }
 local History_mt = { __index = History }

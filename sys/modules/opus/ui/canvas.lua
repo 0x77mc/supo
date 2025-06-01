@@ -1,6 +1,6 @@
-local class  = require('opus.class')
-local Region = require('opus.ui.region')
-local Util   = require('opus.util')
+local class  = require('supo.class')
+local Region = require('supo.ui.region')
+local Util   = require('supo.util')
 
 local _rep   = string.rep
 local _sub   = string.sub

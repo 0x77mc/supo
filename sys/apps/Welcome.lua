@@ -1,7 +1,7 @@
-local Ansi     = require('opus.ansi')
-local Security = require('opus.security')
-local SHA      = require('opus.crypto.sha2')
-local UI       = require('opus.ui')
+local Ansi     = require('supo.ansi')
+local Security = require('supo.security')
+local SHA      = require('supo.crypto.sha2')
+local UI       = require('supo.ui')
 
 local colors   = _G.colors
 local os       = _G.os
@@ -9,7 +9,7 @@ local shell    = _ENV.shell
 
 local splashIntro = [[First Time Setup
 
-%sThanks for installing Opus OS. The next screens will prompt you for basic settings for this computer.]]
+%sThanks for installing Supo OS. The next screens will prompt you for basic settings for this computer.]]
 local labelIntro = [[Set a friendly name for this computer.
 
 %sNo spaces recommended.]]
@@ -28,7 +28,7 @@ LDDestroier: Art design + custom apps
 Lemmmy:      Application improvements
 
 %sContribute at:%s
-https://github.com/kepler155c/opus]]
+https://github.com/0x77mc/supo]]
 
 local page = UI.Page {
 	wizard = UI.Wizard {

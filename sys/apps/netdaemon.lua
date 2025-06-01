@@ -1,5 +1,5 @@
-local Event = require('opus.event')
-local Util  = require('opus.util')
+local Event = require('supo.event')
+local Util  = require('supo.util')
 
 local device     = _G.device
 local fs         = _G.fs

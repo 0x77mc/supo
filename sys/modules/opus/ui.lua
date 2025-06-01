@@ -1,11 +1,11 @@
-local Array      = require('opus.array')
-local Blit       = require('opus.ui.blit')
-local Canvas     = require('opus.ui.canvas')
-local class      = require('opus.class')
-local Event      = require('opus.event')
-local Input      = require('opus.input')
-local Transition = require('opus.ui.transition')
-local Util       = require('opus.util')
+local Array      = require('supo.array')
+local Blit       = require('supo.ui.blit')
+local Canvas     = require('supo.ui.canvas')
+local class      = require('supo.class')
+local Event      = require('supo.event')
+local Input      = require('supo.input')
+local Transition = require('supo.ui.transition')
+local Util       = require('supo.util')
 
 local _rep       = string.rep
 local colors     = _G.colors
@@ -1094,7 +1094,7 @@ end
 -- lazy load components
 local function loadComponents()
 	local function load(name)
-		local s, m = Util.run(_ENV, 'sys/modules/opus/ui/components/' .. name .. '.lua')
+		local s, m = Util.run(_ENV, 'sys/modules/supo/ui/components/' .. name .. '.lua')
 		if not s then
 			error(m)
 		end
@@ -1107,7 +1107,7 @@ local function loadComponents()
 		return UI[name]
 	end
 
-	local components = fs.list('sys/modules/opus/ui/components')
+	local components = fs.list('sys/modules/supo/ui/components')
 	for _, f in pairs(components) do
 		local name = f:match('(.+)%.')
 

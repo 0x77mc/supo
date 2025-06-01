@@ -1,5 +1,5 @@
-local class = require('opus.class')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local UI    = require('supo.ui')
 
 UI.TitleBar = class(UI.Window)
 UI.TitleBar.defaults = {
@@ -90,7 +90,7 @@ function UI.TitleBar.example()
 			end
 		end,
 		enable = function (self)
-			require('opus.event').onInterval(.5, function()
+			require('supo.event').onInterval(.5, function()
 				self.filler = string.rep(string.char(math.random(33, 126)), self.width)
 				self:draw(true)
 				self:sync()

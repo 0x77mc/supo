@@ -1,10 +1,10 @@
-local BulkGet  = require('opus.bulkget')
-local Config   = require('opus.config')
-local Git      = require('opus.git')
-local LZW      = require('opus.compress.lzw')
-local Packages = require('opus.packages')
-local Tar      = require('opus.compress.tar')
-local Util     = require('opus.util')
+local BulkGet  = require('supo.bulkget')
+local Config   = require('supo.config')
+local Git      = require('supo.git')
+local LZW      = require('supo.compress.lzw')
+local Packages = require('supo.packages')
+local Tar      = require('supo.compress.tar')
+local Util     = require('supo.util')
 
 local fs       = _G.fs
 local term     = _G.term

@@ -1,6 +1,6 @@
-local Ansi   = require('opus.ansi')
-local Config = require('opus.config')
-local UI     = require('opus.ui')
+local Ansi   = require('supo.ansi')
+local Config = require('supo.config')
+local UI     = require('supo.ui')
 
 local colors = _G.colors
 local device = _G.device

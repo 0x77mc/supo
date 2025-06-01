@@ -1,13 +1,13 @@
-local Config = require('opus.config')
-local Util   = require('opus.util')
+local Config = require('supo.config')
+local Util   = require('supo.util')
 
 local fs    = _G.fs
 local shell = _ENV.shell
 
-local URL = 'https://raw.githubusercontent.com/kepler155c/opus/%s/.opus_version'
+local URL = 'https://raw.githubusercontent.com/0x77mc/supo/%s/.supo_version'
 
-if fs.exists('.opus_version') then
-	local f = fs.open('.opus_version', 'r')
+if fs.exists('.supo_version') then
+	local f = fs.open('.supo_version', 'r')
 	local date = f.readLine()
 	f.close()
 	date = type(date) == 'string' and Util.split(date)[1]

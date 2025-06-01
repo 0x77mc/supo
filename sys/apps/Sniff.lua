@@ -1,6 +1,6 @@
-local UI    = require('opus.ui')
-local Event = require('opus.event')
-local Util  = require('opus.util')
+local UI    = require('supo.ui')
+local Event = require('supo.event')
+local Util  = require('supo.util')
 
 local colors     = _G.colors
 local device     = _G.device

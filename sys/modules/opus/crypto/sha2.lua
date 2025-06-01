@@ -1,6 +1,6 @@
 -- SHA-256, HMAC and PBKDF2 functions in ComputerCraft
 -- By Anavrins
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local bit     = _G.bit
 local mod32   = 2^32

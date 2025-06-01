@@ -1,6 +1,6 @@
-local Security = require('opus.security')
-local SHA      = require('opus.crypto.sha2')
-local UI       = require('opus.ui')
+local Security = require('supo.security')
+local SHA      = require('supo.crypto.sha2')
+local UI       = require('supo.ui')
 
 return UI.Tab {
 	title = 'Password',

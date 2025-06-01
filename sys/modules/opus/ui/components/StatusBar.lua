@@ -1,7 +1,7 @@
-local class = require('opus.class')
-local Event = require('opus.event')
-local UI    = require('opus.ui')
-local Util  = require('opus.util')
+local class = require('supo.class')
+local Event = require('supo.event')
+local UI    = require('supo.ui')
+local Util  = require('supo.util')
 
 UI.StatusBar = class(UI.Window)
 UI.StatusBar.defaults = {

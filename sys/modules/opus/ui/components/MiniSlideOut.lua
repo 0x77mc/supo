@@ -1,5 +1,5 @@
-local class = require('opus.class')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local UI    = require('supo.ui')
 
 UI.MiniSlideOut = class(UI.SlideOut)
 UI.MiniSlideOut.defaults = {

@@ -1,8 +1,8 @@
-local class = require('opus.class')
-local Event = require('opus.event')
-local Sound = require('opus.sound')
-local UI    = require('opus.ui')
-local Util  = require('opus.util')
+local class = require('supo.class')
+local Event = require('supo.event')
+local Sound = require('supo.sound')
+local UI    = require('supo.ui')
+local Util  = require('supo.util')
 
 UI.Notification = class(UI.Window)
 UI.Notification.defaults = {

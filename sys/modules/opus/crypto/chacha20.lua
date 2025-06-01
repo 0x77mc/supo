@@ -1,9 +1,9 @@
 -- Chacha20 cipher in ComputerCraft
 -- By Anavrins
 
-local cbor = require('opus.cbor')
-local sha2 = require('opus.crypto.sha2')
-local Util = require('opus.util')
+local cbor = require('supo.cbor')
+local sha2 = require('supo.crypto.sha2')
+local Util = require('supo.util')
 
 local ROUNDS = 8 -- Adjust this for speed tradeoff
 

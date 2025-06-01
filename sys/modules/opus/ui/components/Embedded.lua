@@ -1,7 +1,7 @@
-local class    = require('opus.class')
-local Event    = require('opus.event')
-local Terminal = require('opus.terminal')
-local UI       = require('opus.ui')
+local class    = require('supo.class')
+local Event    = require('supo.event')
+local Terminal = require('supo.terminal')
+local UI       = require('supo.ui')
 
 UI.Embedded = class(UI.Window)
 UI.Embedded.defaults = {
@@ -73,7 +73,7 @@ function UI.Embedded:eventHandler(event)
 end
 
 function UI.Embedded.example()
-	local Util  = require('opus.util')
+	local Util  = require('supo.util')
 	local term  = _G.term
 
 	return UI.Embedded {

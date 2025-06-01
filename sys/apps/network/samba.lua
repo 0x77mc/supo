@@ -1,5 +1,5 @@
-local Event  = require('opus.event')
-local Socket = require('opus.socket')
+local Event  = require('supo.event')
+local Socket = require('supo.socket')
 
 local fs = _G.fs
 

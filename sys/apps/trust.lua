@@ -1,8 +1,8 @@
-local Crypto   = require('opus.crypto.chacha20')
-local Security = require('opus.security')
-local SHA      = require('opus.crypto.sha2')
-local Socket   = require('opus.socket')
-local Terminal = require('opus.terminal')
+local Crypto   = require('supo.crypto.chacha20')
+local Security = require('supo.security')
+local SHA      = require('supo.crypto.sha2')
+local Socket   = require('supo.socket')
+local Terminal = require('supo.terminal')
 
 local os = _G.os
 

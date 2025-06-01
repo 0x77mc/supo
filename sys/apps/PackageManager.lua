@@ -1,8 +1,8 @@
-local Ansi     = require('opus.ansi')
-local Config   = require('opus.config')
-local Packages = require('opus.packages')
-local UI       = require('opus.ui')
-local Util     = require('opus.util')
+local Ansi     = require('supo.ansi')
+local Config   = require('supo.config')
+local Packages = require('supo.packages')
+local UI       = require('supo.ui')
+local Util     = require('supo.util')
 
 local colors   = _G.colors
 local term     = _G.term

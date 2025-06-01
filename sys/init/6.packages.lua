@@ -1,5 +1,5 @@
-local Packages = require('opus.packages')
-local Util     = require('opus.util')
+local Packages = require('supo.packages')
+local Util     = require('supo.util')
 
 local fs    = _G.fs
 local help  = _G.help

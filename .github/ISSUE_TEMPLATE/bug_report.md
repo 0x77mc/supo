@@ -24,7 +24,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Versions**
-What version of Minecraft, CC:Tweaked, Plethora (if applicable), Opus branch are you using
+What version of Minecraft, CC:Tweaked, Plethora (if applicable), Supo branch are you using
  - MC : [e.g. 1.12.2]
  - CC:T : [e.g. 1.88]
- - Opus : [e.g. develop-1.8]
+ - Supo : [e.g. develop-1.8]

@@ -1,5 +1,5 @@
-local class = require('opus.class')
-local UI    = require('opus.ui')
+local class = require('supo.class')
+local UI    = require('supo.ui')
 
 UI.TextArea = class(UI.Viewport)
 UI.TextArea.defaults = {
@@ -26,7 +26,7 @@ function UI.TextArea:draw()
 end
 
 function UI.TextArea.example()
-	local Ansi = require('opus.ansi')
+	local Ansi = require('supo.ansi')
 	return UI.Window {
 		backgroundColor = 2048,
 		t1 = UI.TextArea {

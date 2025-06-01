@@ -1,5 +1,5 @@
-local Config = require('opus.config')
-local UI = require('opus.ui')
+local Config = require('supo.config')
+local UI = require('supo.ui')
 
 local shell = _ENV.shell
 
@@ -12,7 +12,7 @@ UI:setPage(UI.Page {
     UI.Text {
         x = 2, y = 2, ex = -2,
         align = 'center',
-        value = 'Opus has been updated.',
+        value = 'Supo has been updated.',
         textColor = 'yellow',
     },
     UI.TextArea {

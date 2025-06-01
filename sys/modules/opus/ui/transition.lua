@@ -1,4 +1,4 @@
-local Tween  = require('opus.ui.tween')
+local Tween  = require('supo.ui.tween')
 
 local Transition = { }
 
