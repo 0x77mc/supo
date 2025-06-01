@@ -36,17 +36,17 @@ function GPS.locate(timeout, debug)
 			if side == modem.side and chan == GPS.CHANNEL_GPS and reply == GPS.CHANNEL_GPS and dist then
 				if type(msg) == "table" and #msg == 3 and tonumber(msg[1]) and tonumber(msg[2]) and tonumber(msg[3]) then
 					local fix = {
-						position = vector.new(unpack(msg)),
+						position = vector.new(tonumber(msg[1]), tonumber(msg[2]), tonumber(msg[3])),
 						distance = dist,
 					}
 					if debug then
-						print(fix.distance..' meters from '..fix.position:tostring())
+						print(fix.distance..' meters from '..tostring(fix.position))
 					end
 					if fix.distance == 0 then
 						pos = fix.position
 					else
 						fixes[#fixes+1] = fix
-						if #fixes > 3 then
+						if #fixes >= 3 then
 							pos = GPS.trilaterate(fixes)
 							if pos then break end
 						end
@@ -61,7 +61,7 @@ function GPS.locate(timeout, debug)
 	if closeChannel then
 		modem.close(GPS.CHANNEL_GPS)
 	end
-	if debug then
+	if debug and pos then
 		print("Position is "..pos.x..","..pos.y..","..pos.z)
 	end
 	return pos and vector.new(pos.x, pos.y, pos.z)
@@ -119,14 +119,28 @@ local function trilaterate(A, B, C)
 		local result1 = result + (ez * z)
 		local result2 = result - (ez * z)
 
-		local rounded1, rounded2 = result1:round(0.01), result2:round(0.01)
+		-- Use proper rounding for CC: Tweaked
+		local function roundVector(v, precision)
+			precision = precision or 0.01
+			return vector.new(
+				math.floor(v.x / precision + 0.5) * precision,
+				math.floor(v.y / precision + 0.5) * precision,
+				math.floor(v.z / precision + 0.5) * precision
+			)
+		end
+
+		local rounded1, rounded2 = roundVector(result1), roundVector(result2)
 		if rounded1.x ~= rounded2.x or rounded1.y ~= rounded2.y or rounded1.z ~= rounded2.z then
 			return rounded1, rounded2
 		else
 			return rounded1
 		end
 	end
-	return result:round(0.01)
+	return result and vector.new(
+		math.floor(result.x / 0.01 + 0.5) * 0.01,
+		math.floor(result.y / 0.01 + 0.5) * 0.01,
+		math.floor(result.z / 0.01 + 0.5) * 0.01
+	)
 end
 
 local function narrow( p1, p2, fix )
@@ -136,23 +150,33 @@ local function narrow( p1, p2, fix )
 	if math.abs(dist1 - dist2) < 0.01 then
 		return p1, p2
 	elseif dist1 < dist2 then
-		return p1:round(0.01)
+		return vector.new(
+			math.floor(p1.x / 0.01 + 0.5) * 0.01,
+			math.floor(p1.y / 0.01 + 0.5) * 0.01,
+			math.floor(p1.z / 0.01 + 0.5) * 0.01
+		)
 	else
-		return p2:round(0.01)
+		return vector.new(
+			math.floor(p2.x / 0.01 + 0.5) * 0.01,
+			math.floor(p2.y / 0.01 + 0.5) * 0.01,
+			math.floor(p2.z / 0.01 + 0.5) * 0.01
+		)
 	end
 end
 -- end stock gps api
 
 function GPS.trilaterate(tFixes)
-	local attemps = 0
+	local attempts = 0
 	for tFixes in Util.permutation(tFixes) do
-		attemps = attemps + 1
-		local pos1, pos2 = trilaterate(tFixes[4], tFixes[3], tFixes[2])
-		if pos2 then
-			pos1, pos2 = narrow(pos1, pos2, tFixes[1])
-		end
-		if not pos2 and pos1 and not (pos1.x ~= pos1.x) then
-			return pos1, attemps
+		attempts = attempts + 1
+		if #tFixes >= 3 then
+			local pos1, pos2 = trilaterate(tFixes[1], tFixes[2], tFixes[3])
+			if pos1 and #tFixes >= 4 then
+				pos1, pos2 = narrow(pos1, pos2, tFixes[4])
+			end
+			if pos1 and not pos2 and not (pos1.x ~= pos1.x) then -- Check for NaN
+				return pos1, attempts
+			end
 		end
 	end
 end
