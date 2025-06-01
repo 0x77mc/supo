@@ -60,8 +60,8 @@ function Packages:downloadList()
 		[ 'master-1.8' ] = 'https://raw.githubusercontent.com/0x77mc/supo-apps/master-1.8/packages.list',
 	}
 
-	if packages[_G.OPUS_BRANCH] then
-		Util.download(packages[_G.OPUS_BRANCH], 'usr/config/packages')
+	if packages[_G.SUPO_BRANCH] then
+		Util.download(packages[_G.SUPO_BRANCH], 'usr/config/packages')
 	end
 end
 
@@ -74,7 +74,7 @@ function Packages:downloadManifest(package)
 		if c then
 			c = textutils.unserialize(c)
 			if c then
-				c.repository = c.repository:gsub('{{OPUS_BRANCH}}', _G.OPUS_BRANCH)
+				c.repository = c.repository:gsub('{{SUPO_BRANCH}}', _G.SUPO_BRANCH)
 				return c
 			end
 		end
@@ -86,7 +86,7 @@ function Packages:getManifest(package)
 	if fs.exists(fname) then
 		local c = Util.readTable(fname)
 		if c and c.repository then
-			c.repository = c.repository:gsub('{{OPUS_BRANCH}}', _G.OPUS_BRANCH)
+			c.repository = c.repository:gsub('{{SUPO_BRANCH}}', _G.SUPO_BRANCH)
 			return c
 		end
 	end

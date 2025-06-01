@@ -16,5 +16,5 @@ Modern fork of [Opus OS](https://github.com/0x77mc/supo)
 
 ## Install
 ```
-pastebin run UzGHLbNC
+pastebin run QUjQrkGF
 ```

@@ -33,7 +33,7 @@ if fs.exists('.supo_version') then
 			Config.update('version', config)
 			print('Checking for new version')
 			pcall(function()
-				local c = Util.httpGet(string.format(URL, _G.OPUS_BRANCH))
+				local c = Util.httpGet(string.format(URL, _G.SUPO_BRANCH))
 				if c then
 					local lines = Util.split(c)
 					local revdate = table.remove(lines, 1)
